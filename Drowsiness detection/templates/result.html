@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Result</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+        }
+        h1 {
+            color: #333;
+        }
+        h2 {
+            color: #007bff;
+        }
+        img {
+            max-width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <h1>Prediction Result</h1>
+    <h2>{{ label }} in the given image.</h2>
+
+    <img src="{{ image_url }}" alt="Uploaded Image">
+
+    {% if label == "Drowsiness Detected" %}
+        <p>It appears that the person in the image is experiencing drowsiness. Please ensure their safety.</p>
+    {% else %}
+        <p>No drowsiness detected. Continue to stay alert and drive safely.</p>
+    {% endif %}
+</body>
+</html>
